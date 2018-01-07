@@ -8,11 +8,13 @@ import { StatusAPIService } from './status.service';
   styleUrls: ['./status.component.sass']
 })
 export class StatusComponent implements OnInit {
-    results = []
+    results = [];
   constructor(private statusAPI: StatusAPIService) { }
 
   ngOnInit() {
-      this.results = this.statusAPI.list();
-  }
+      this.statusAPI.list().subscribe(data => {
+        this.results = data.results;
+      });
+    }
 
 }
