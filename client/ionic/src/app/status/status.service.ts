@@ -14,12 +14,20 @@ const httpOptions = {
 export class StatusAPIService {
 
 
-
   constructor(private http: HttpClient) { }
 
   list(): Observable<any> {
     const apiListEndpoint = '${this.baseUrl}status/';
     return this.http.get(apiListEndpoint);
   }
+
+  get(id?: number): Observable<any> {
+      if (!id) {
+          id = 10;
+      }
+      const apiDetailEndpoint = '${this.baseUrl}status/${id}/';
+      return this.http.get(apiDetailEndpoint);
+  }
+
 
 }
