@@ -10,7 +10,7 @@ schema_view = get_swagger_view(title='Pastebin API')
 
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='home.html'), name='home'),
+    url(r'^$', TemplateView.as_view(template_name='ng.html'), name='home'),
     url(r'^api/$', schema_view),
     url(r'^admin/', admin.site.urls),
     url(r'^api/auth/', include('accounts.api.urls', namespace='api-auth')),
