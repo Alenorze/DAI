@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Status } from './status';
 import { StatusAPIService } from './status.service';
+
 
 @Component({
   selector: 'app-status',
@@ -8,7 +10,7 @@ import { StatusAPIService } from './status.service';
   styleUrls: ['./status.component.sass']
 })
 export class StatusComponent implements OnInit {
-    results = [];
+    results: Status[] = [];
   constructor(private statusAPI: StatusAPIService) { }
 
   ngOnInit() {

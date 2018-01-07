@@ -18,7 +18,7 @@ export class StatusCreateComponent implements OnInit {
         Validators.minLength(4),
         Validators.maxLength(280)
       ])
-    })
+    });
   }
 
   handleSubmit(event: any, statusDir: NgForm, statusForm: FormGroup) {

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
+import { Status } from '../status/status';
 import { StatusAPIService } from '../status/status.service';
+
 
 @Component({
   selector: 'app-status-detail',
@@ -11,7 +13,7 @@ import { StatusAPIService } from '../status/status.service';
 })
 export class StatusDetailComponent implements OnInit {
    detailId: any;
-   statusItem: any;
+   statusItem: Status;
   constructor(
       private statusAPI: StatusAPIService,
       private location: Location,
@@ -32,7 +34,7 @@ export class StatusDetailComponent implements OnInit {
 
   }
 
-  goBack(){
+  goBack() {
       this.location.back();
   }
 
