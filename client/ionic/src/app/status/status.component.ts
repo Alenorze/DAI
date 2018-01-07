@@ -11,19 +11,18 @@ export class StatusComponent implements OnInit {
             "id": 10,
             "user": {
                 "id": 1,
-                "username": "cfe",
-                "uri": "http://127.0.0.1:8000/api/user/cfe/"
+                "username": "Alenorze",
+                "uri": "http://127.0.0.1:8000/api/user/Alenorze/"
             },
-            "content": "please delete me",
-            "image": "http://127.0.0.1:8000/media/status/cfe/logo_ndfWTYl.jpg"
+            "content": "please delete me"
         },
         {
             "uri": "http://127.0.0.1:8000/api/status/11/",
             "id": 11,
             "user": {
                 "id": 1,
-                "username": "cfe",
-                "uri": "http://127.0.0.1:8000/api/user/cfe/"
+                "username": "Alenorze",
+                "uri": "http://127.0.0.1:8000/api/user/Alenorze/"
             },
             "content": "Some great new content!",
             "image": null
