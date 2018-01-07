@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
- 
+
+
 @Component({
   selector: 'app-status-detail',
   templateUrl: './status-detail.component.html',
-  styleUrls: ['./status-detail.component.css']
+  styleUrls: ['./status-detail.component.sass']
 })
 export class StatusDetailComponent implements OnInit {
    detailId: any;

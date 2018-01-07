@@ -6,10 +6,10 @@ User = get_user_model()
 
 class UserTestCase(TestCase): 
     def setUp(self): 
-        user =  User.objects.create(username='cfe', email='hello@cfe.com')
-        user.set_password("yeahhhcfe")
+        user =  User.objects.create(username='Alenorze', email='hello@Alenorze.com')
+        user.set_password("yeahhhAlenorze")
         user.save()
 
     def test_created_user(self):
-        qs = User.objects.filter(username='cfe')
+        qs = User.objects.filter(username='Alenorze')
         self.assertEqual(qs.count(), 1)

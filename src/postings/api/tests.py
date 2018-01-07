@@ -117,7 +117,7 @@ class BlogPostAPITestCase(APITestCase):
 
     def test_user_login_and_update(self):
         data = {
-            'username': 'testcfeuser',
+            'username': 'testAlenorzeuser',
             'password': 'somerandopassword'
         }
         url = api_reverse("api-login")

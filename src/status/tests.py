@@ -8,12 +8,12 @@ User = get_user_model()
 
 class StatusTestCase(TestCase): 
     def setUp(self): 
-        user =  User.objects.create(username='cfe', email='hello@cfe.com')
-        user.set_password("yeahhhcfe")
+        user =  User.objects.create(username='Alenorze', email='hello@Alenorze.com')
+        user.set_password("yeahhhAlenorze")
         user.save()
 
     def test_creating_status(self):
-        user = User.objects.get(username='cfe')
+        user = User.objects.get(username='Alenorze')
         obj = Status.objects.create(user=user, content='Some cool new content')
         self.assertEqual(obj.id, 1)
         qs = Status.objects.all()

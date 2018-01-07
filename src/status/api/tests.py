@@ -22,8 +22,8 @@ User = get_user_model()
 
 class StatusAPITestCase(APITestCase): 
     def setUp(self): 
-        user =  User.objects.create(username='testcfeuser', email='hello@cfe.com')
-        user.set_password("yeahhhcfe")
+        user =  User.objects.create(username='testAlenorzeuser', email='hello@Alenorze.com')
+        user.set_password("yeahhhAlenorze")
         user.save()
         status_obj = Status.objects.create(user=user, content='Hello there!')
 
@@ -82,7 +82,7 @@ class StatusAPITestCase(APITestCase):
             self.assertEqual(Status.objects.count(), 2)
             img_data = response.data.get('image')
             self.assertNotEqual(img_data, None)
-        temp_img_dir = os.path.join(settings.MEDIA_ROOT, 'status', 'testcfeuser')
+        temp_img_dir = os.path.join(settings.MEDIA_ROOT, 'status', 'testAlenorzeuser')
         if os.path.exists(temp_img_dir):
             shutil.rmtree(temp_img_dir)
 
@@ -104,7 +104,7 @@ class StatusAPITestCase(APITestCase):
             
 
             self.assertEqual(Status.objects.count(), 2)
-        temp_img_dir = os.path.join(settings.MEDIA_ROOT, 'status', 'testcfeuser')
+        temp_img_dir = os.path.join(settings.MEDIA_ROOT, 'status', 'testAlenorzeuser')
         if os.path.exists(temp_img_dir):
             shutil.rmtree(temp_img_dir)
 

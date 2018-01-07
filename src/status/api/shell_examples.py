@@ -82,7 +82,7 @@ class CustomSerializer(serializers.Serializer):
     email       =  serializers.EmailField()
 
 
-data = {'email': 'hello@teamcfe.com', 'content': "please delete me"}
+data = {'email': 'hello@teamAlenorze.com', 'content': "please delete me"}
 create_obj_serializer = CustomSerializer(data=data)
 if create_obj_serializer.is_valid():
     valid_data = create_obj_serializer.data
