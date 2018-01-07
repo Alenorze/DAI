@@ -13,7 +13,7 @@ export class StatusCreateComponent implements OnInit {
 
   ngOnInit() {
     this.statusForm = new FormGroup({
-      'content': new FormControl("", [
+      'content': new FormControl('', [
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(280)
@@ -21,15 +21,15 @@ export class StatusCreateComponent implements OnInit {
     })
   }
 
-  handleSubmit(event:any, statusDir:NgForm, statusForm:FormGroup){
-    event.preventDefault()
-    if (statusDir.submitted){
-      statusDir.resetForm({content: "some new content"})
+  handleSubmit(event: any, statusDir: NgForm, statusForm: FormGroup) {
+    event.preventDefault();
+    if (statusDir.submitted) {
+      statusDir.resetForm({content: 'some new content'});
     }
   }
 
   get content(){
-    return this.statusForm.get("content")
+    return this.statusForm.get('content');
   }
 
 }

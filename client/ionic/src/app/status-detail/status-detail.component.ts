@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-
 @Component({
   selector: 'app-status-detail',
   templateUrl: './status-detail.component.html',
@@ -16,17 +15,17 @@ export class StatusDetailComponent implements OnInit {
       ) { }
 
   ngOnInit() {
-      this.detailId = this.route.snapshot.paramMap.get('id')
-      let number = parseInt(this.detailId)
-      if (!number){
-          alert("Hey not a valid route")
-          this.goBack()
+      this.detailId = this.route.snapshot.paramMap.get('id');
+      const number = parseInt(this.detailId);
+      if (!number) {
+          alert('Hey not a valid route');
+          this.goBack();
       }
 
   }
 
   goBack(){
-      this.location.back()
+      this.location.back();
   }
 
 
