@@ -19,7 +19,7 @@ class AnonPermissionOnly(permissions.BasePermission):
     """
 
     def has_permission(self, request, view):
-        return not request.user.is_authenticated() # request.user.is_authenticated
+        return not request.user.is_authenticated # request.user.is_authenticated
 
 
 class IsOwnerOrReadOnly(permissions.BasePermission):
@@ -36,4 +36,6 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
             return True
 
         # Instance must have an attribute named `owner`.
+        # if obj.user == request.user:
+        #     return True
         return obj.owner == request.user
